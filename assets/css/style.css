@@ -16476,12 +16476,8 @@ footer .nav li {display: inline-block; }
   position: relative;
   padding: .625rem;
   border: 1px solid #e5e5e5; }
-  .accordion.open .accordion-control::after {
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    transform: rotate(180deg); }
-  .accordion:not(:first-child) {
-    border-top-width: 0; }
+.accordion.open .accordion-control::after {-webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); transform: rotate(180deg);}
+.accordion:not(:first-child) {border-top-width: 0; }
 
 .accordion-control {
   position: relative;
@@ -16490,7 +16486,7 @@ footer .nav li {display: inline-block; }
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -16524,13 +16520,13 @@ footer .nav li {display: inline-block; }
     transition-delay: 0s; }
 
 .accordion-content {overflow: hidden; }
-.accordion-content .accordion-content-wrapper {padding: 0 2rem 1rem 2rem; }
+.accordion-content .accordion-content-wrapper {padding: 0 2rem 1rem 1rem; }
 
-.text-white .accordion-group .accordion {border: 0; background-color: rgba(255, 255, 255, 0.05); }
+.text-white .accordion-group .accordion {border: 0; background-color: rgba(255, 255, 255, 0.05);}
 .text-white .accordion-group .accordion:not(:first-child) {margin-top: 2px; }
-.text-white .accordion-group .accordion:hover {background-color: rgba(255, 255, 255, 0.1); }
+.text-white .accordion-group .accordion:hover {background-color: rgba(255, 255, 255, 0.1);}
 .text-white .accordion-group .accordion-control h5 {color: inherit; }
-.text-white .accordion-group .accordion-control::after {color: rgba(255, 255, 255, 0.5); }
+.text-white .accordion-group .accordion-control::after {color: rgba(255, 255, 255, 0.5);}
 
 .accordion-group-feature .accordion {border-radius: 0.25rem; padding: 1rem; }
 .accordion-group-feature .accordion:not(:first-child) {margin-top: .625rem; }
@@ -16539,14 +16535,13 @@ footer .nav li {display: inline-block; }
 .accordion-group-feature .accordion-control,
 .accordion-group-feature .accordion-content > div {padding: 1rem; }
 
-.text-white .accordion-group-feature .accordion:not(:first-child) {
-  margin-top: .625rem; }
+.text-white .accordion-group-feature .accordion:not(:first-child) {margin-top: .625rem;}
 
 .accordion-group-minimal .accordion {border: 0; padding: 0 0 0 3rem; }
 .accordion-group-minimal .accordion:not(:first-child) {margin-top: 1.25rem; }
 
 .accordion-group-minimal .accordion-control {min-height: 3.75rem; }
-  .accordion-group-minimal .accordion-control::after {
+.accordion-group-minimal .accordion-control::after {
     left: -3rem;
     width: 3.75rem;
     color: #000;
@@ -16575,7 +16570,7 @@ footer .nav li {display: inline-block; }
       transform: scale(1.4); }
 .accordion-group-steps .accordion:hover .accordion-control::before {border-color: #4829B2; }
 .accordion-group-steps .accordion:not(:first-child) {margin: 0; }
-      .accordion-group-steps .accordion:not(:first-child)::before {
+.accordion-group-steps .accordion:not(:first-child)::before {
         content: "";
         display: block;
         position: absolute;
@@ -16605,7 +16600,7 @@ footer .nav li {display: inline-block; }
       -webkit-transition-delay: 0s;
       -moz-transition-delay: 0s;
       transition-delay: 0s;
-      content: "";
+      content: counter(accordion, decimal);
       position: absolute;
       display: block;
       top: 50%;
@@ -16644,13 +16639,12 @@ footer .nav li {display: inline-block; }
 .accordion-group-portal .accordion-content > div {padding-bottom: 2rem; }
 
 @media (max-width: 1199.98px) {
-  .accordion-control {display: block; }
-  .accordion-control > *:not(:first-child) {margin-top: .25rem; }
-  .accordion-group-feature .accordion-control > * {display: inline-block; }
+  .accordion-control {display: block;}
+  .accordion-control > *:not(:first-child) {margin-top: .25rem;}
+  .accordion-group-feature .accordion-control > * {display: inline-block;}
   }
 
 .owl-carousel[data-dots="true"] {margin-bottom: 60px; }
-
 .owl-carousel .owl-nav button.owl-prev,
 .owl-carousel .owl-nav button.owl-next {
   -webkit-transition: all 0.2s;
