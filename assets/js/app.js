@@ -1,7 +1,7 @@
 let pageFileTable = {
 	"main" : "main.html",
 	"work" : "work.html",
-	"team" : "team.html",
+	"project" : "project.html",
 	"contact" : "contact.html",
 };
 

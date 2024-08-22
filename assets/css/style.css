@@ -16564,9 +16564,9 @@ footer .nav li {display: inline-block; }
       -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
       -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
-      -webkit-transform: scale(1.4);
-      -moz-transform: scale(1.4);
-      transform: scale(1.4); }
+      -webkit-transform: scale(1.25);
+      -moz-transform: scale(1.25);
+      transform: scale(1.25); }
 .accordion-group-steps .accordion:hover .accordion-control::before {border-color: #4829B2;}
 .accordion-group-steps .accordion:not(:first-child) {margin: 0; }
 .accordion-group-steps .accordion:not(:first-child)::before {
@@ -16604,11 +16604,11 @@ footer .nav li {display: inline-block; }
       display: block;
       top: 50%;
       left: 0;
-      width: 3.75rem;
-      height: 3.75rem;
+      width: 3.5rem;
+      height: 3.5rem;
       color: #000;
       margin-top: -30px;
-      line-height: calc(3.75rem - 4px);
+      line-height: calc(3.5rem - 4px);
       text-align: center;
       border: 2px solid #e5e5e5;
       z-index: 20;
