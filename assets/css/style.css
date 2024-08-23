@@ -15343,8 +15343,8 @@ img {max-width: 100%; }
   display: block;
   position: absolute;
   top: 29px;
-  left: 3.75rem;
-  width: calc(100% - 40px);
+  left: 3.5rem;
+  width: calc(100% - 35px);
   height: 2px;
   background: #e5e5e5;
   z-index: 10; }
@@ -16543,9 +16543,9 @@ footer .nav li {display: inline-block; }
 .accordion-group-steps {overflow: visible;}
 .accordion-group-steps .accordion {padding-left: 3.75rem; counter-increment: accordion; background: transparent; border: 0;}
 .accordion-group-steps .accordion.open .accordion-control::before {
-      background: #4829B2;
-      border-color: #4829B2;
-      color: #fff;
+      background: #F5F5F5;
+      border-color: #e5e5e5;
+      color: #151515;
       -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
       -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
@@ -16568,9 +16568,9 @@ footer .nav li {display: inline-block; }
       content: "";
       display: block;
       position: absolute;
-      top: calc(50% + 30px);
+      top: calc(50% + 25px);
       left: 29px;
-      height: calc(50% - 30px);
+      height: calc(50% - 25px);
       width: 2px;
       background: #e5e5e5;
       z-index: 10; }
