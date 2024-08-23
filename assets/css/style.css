@@ -15306,10 +15306,8 @@ img {max-width: 100%; }
   .text-white .socials a:hover, .user-caption .socials a:hover {
     background: rgba(255, 255, 255, 0.2); }
 
-.step {
-  position: relative;
-  padding: 5.625rem 20% 0 0; }
-  .step::before {
+.step {position: relative; padding: 5.625rem 20% 0 0; }
+.step::before {
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     transition: all 0.2s;
@@ -15321,15 +15319,15 @@ img {max-width: 100%; }
     display: block;
     top: 0;
     left: 0;
-    width: 3.75rem;
-    height: 3.75rem;
-    line-height: calc(3.75rem - .25rem);
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: calc(3.5rem - .25rem);
     text-align: center;
     border: 2px solid #e5e5e5;
     z-index: 20;
     border-radius: 50%;
     font-size: 1.5rem; }
-  .step:hover::before, .step.step-highlight::before {
+.step:hover::before, .step.step-highlight::before {
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
