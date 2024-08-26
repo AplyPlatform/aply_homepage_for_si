@@ -2731,10 +2731,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-link {
   border-radius: 0.25rem; }
 
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: transparent; }
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {color: #fff; background-color: transparent;}
 
 .nav-fill .nav-item {
   flex: 1 1 auto;
@@ -16278,17 +16275,10 @@ footer .nav li {display: inline-block; }
       padding: .5rem 1rem;
       margin: 0; }
 
-.nav-pills .lavalamp-object {
-  display: block;
-  position: absolute;
-  border: 2px solid #4829B2;
-  border-radius: 10rem; }
+.nav-pills .lavalamp-object {display: block; position: absolute; background-color:#FFF; border:1px solid #4829B2; border-radius: 10rem;}
 
-.nav-pills .nav-link {
-  z-index: 5;
-  padding: .75rem 1.5rem; }
-  .nav-pills .nav-link.active, .nav-pills .nav-link:hover {
-    color: #444; }
+.nav-pills .nav-link {z-index: 5; padding: .75rem 1.5rem;}
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover {color: #444;}
 
 .nav-switch {
   display: inline-block;
