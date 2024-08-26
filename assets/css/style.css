@@ -15334,7 +15334,7 @@ img {max-width: 100%; }
     -webkit-transform: scale(1.25);
     -moz-transform: scale(1.25);
     transform: scale(1.25);
-    background: #4829B2;
+    background: #e5e5e5;
     border-color: transparent;
     color: #fff; }
 
@@ -16543,7 +16543,7 @@ footer .nav li {display: inline-block; }
 .accordion-group-steps {overflow: visible;}
 .accordion-group-steps .accordion {padding-left: 3.75rem; counter-increment: accordion; background: transparent; border: 0;}
 .accordion-group-steps .accordion.open .accordion-control::before {
-      background: #F5F5F5;
+      background: #e5e5e5;
       border-color: #e5e5e5;
       color: #151515;
       -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
