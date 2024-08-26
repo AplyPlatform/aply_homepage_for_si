@@ -15333,7 +15333,7 @@ img {max-width: 100%; }
     transform: scale(1.25);
     background: #e5e5e5;
     border-color: transparent;
-    color: #fff; }
+    color: #151515; }
 
 .owl-item:not(:last-child) .step::after {
   content: "";
@@ -16542,7 +16542,7 @@ footer .nav li {display: inline-block; }
       -webkit-transform: scale(1.25);
       -moz-transform: scale(1.25);
       transform: scale(1.25); }
-.accordion-group-steps .accordion:hover .accordion-control::before {border-color: #4829B2;}
+.accordion-group-steps .accordion:hover .accordion-control::before {background: #e5e5e5; border-color: #e5e5e5;}
 .accordion-group-steps .accordion:not(:first-child) {margin: 0; }
 .accordion-group-steps .accordion:not(:first-child)::before {
         content: "";
