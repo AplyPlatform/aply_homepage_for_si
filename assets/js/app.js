@@ -459,9 +459,9 @@ async function loadTemplate(templateName) {
 
 function sendApplicationData(form_id)
 {  
-  let form_content = $(form_id).find('input[name="form_content"').val();
-  if (form_content == "") {
-    showDialog("문의 내용을 입력해 주세요.");  
+  let form_name = $(form_id).find('input[name="form_name"]').val();
+  if (form_name == "") {
+    showDialog("성함 또는 기업명을 입력해 주세요.");  
     return false;
   }
 
@@ -474,6 +474,12 @@ function sendApplicationData(form_id)
   let form_email = $(form_id).find('input[name="form_email"]').val();
   if (form_email == "") {
     showDialog("이메일을 입력해 주세요.");  
+    return false;
+  }
+  
+  let form_content = $(form_id).find('input[name="form_content"').val();
+  if (form_content == "") {
+    showDialog("문의 내용을 입력해 주세요.");  
     return false;
   }
 
