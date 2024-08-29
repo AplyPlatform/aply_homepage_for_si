@@ -477,7 +477,7 @@ function sendApplicationData(form_id)
     return false;
   }
   
-  let form_content = $(form_id).find('input[name="form_content"').val();
+  let form_content = $("#form_content").val();
   if (form_content == "") {
     showDialog("문의 내용을 입력해 주세요.");  
     return false;
