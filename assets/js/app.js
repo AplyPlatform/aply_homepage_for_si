@@ -458,29 +458,7 @@ async function loadTemplate(templateName) {
 }
 
 function sendApplicationData(form_id)
-{
-  let min_type = "";
-  if ($(form_id).find('input[name="min_type_1"]').is(":checked")) {
-    min_type = "/제휴및협업";
-  }
-
-  if ($(form_id).find('input[name="min_type_2"]').is(":checked")) {
-    min_type = min_type + "/서비스관련";
-  }
-
-  if ($(form_id).find('input[name="min_type_3"]').is(":checked")) {
-    min_type = min_type + "/SW개발";
-  }
-
-  if ($(form_id).find('input[name="min_type_4"]').is(":checked")) {
-    min_type = min_type + "/기타문의";
-  }
-
-  if (min_type == "") {
-    showDialog("문의 분야를 선택해 주세요.");  
-    return false;
-  }
-
+{  
   let form_content = $(form_id).find('input[name="form_content"').val();
   if (form_content == "") {
     showDialog("문의 내용을 입력해 주세요.");  
@@ -507,9 +485,9 @@ function sendApplicationData(form_id)
   let ref = $('<input type="hidden" value="' + document.referrer + '" name="ref">');	
   $(form_id).append(ref);
 
-  ref = $('<input type="hidden" value="' + min_type + '" name="min_type">');	
+  ref = $('<input type="hidden" value="si" name="min_type">');	
   $(form_id).append(ref);	
-  ref = $('<input type="hidden" value="aplycontact" name="form_kind">');	
+  ref = $('<input type="hidden" value="sicontact" name="form_kind">');	
   $(form_id).append(ref);
 
   if (isRecaptchaInit == true) {
@@ -568,110 +546,23 @@ function ajaxRequest(fed, btn_id) {
 }
 
 function setSubmitHandler(form_p_id) {
-var form_id = "#" + form_p_id;
+  var form_id = "#" + form_p_id;
 
-$(form_id + "_send").on("click", function(e) {
-  e.preventDefault();
-  
-  sendApplicationData(form_id);
-});
-
-$('[name^=form_phone]').keypress(validateNumber);
-}
-
-
-function sendRecruitApplicationData(form_id)
-{
-let min_type = "";
-if ($(form_id).find('input[name="min_type_1"]').is(":checked")) {
-  min_type = "/SW개발";
-}
-
-if ($(form_id).find('input[name="min_type_2"]').is(":checked")) {
-  min_type = min_type + "/데이터분석";
-}
-
-if ($(form_id).find('input[name="min_type_3"]').is(":checked")) {
-  min_type = min_type + "/HW개발";
-}
-
-if ($(form_id).find('input[name="min_type_4"]').is(":checked")) {
-  min_type = min_type + "/마케팅";
-}
-
-if ($(form_id).find('input[name="min_type_5"]').is(":checked")) {
-  min_type = min_type + "/디자인";
-}
-
-if ($(form_id).find('input[name="min_type_6"]').is(":checked")) {
-  min_type = min_type + "/기획";
-}
-
-let form_name = $(form_id).find('input[name="form_name"]').val();
-if (form_name == "") {
-  showDialog("성함을 입력해 주세요.", null);
-  return false;
-}
-
-let form_phone = $(form_id).find('input[name="form_phone"]').val();
-if (form_phone == "") {
-  showDialog("전화번호를 입력해 주세요.", null);
-  return false;
-}
-
-let form_email = $(form_id).find('input[name="form_email"]').val();
-if (form_email == "") {
-  showDialog("이메일을 입력해 주세요.", null);
-  return false;
-}
-
-if ($(form_id).find('input[name="agree_1"').length > 0 && $(form_id).find('input[name="agree_1"').is(":checked") == false) {
-  showDialog("개인정보 처리방침에 동의해 주세요.", null);
-  return false;
-}
-
-let ref = $('<input type="hidden" value="' + document.referrer + '" name="ref">');	
-$(form_id).append(ref);	
-ref = $('<input type="hidden" value="' + min_type + '" name="min_type">');	
-$(form_id).append(ref);	
-
-if (isRecaptchaInit == true) {
-  grecaptcha.execute('6LfPn_UUAAAAAN-EHnm2kRY9dUT8aTvIcfrvxGy7', {action: 'homepage'}).then(function(token) {
-    $(form_id).find('input[name="form_token"]').val(token);
-    let fed = new FormData($(form_id)[0]);
-    ajaxRequest(fed, form_id + "_send");
+  $(form_id + "_send").on("click", function(e) {
+    e.preventDefault();
+    
+    sendApplicationData(form_id);
   });
-}
-else {
-  grecaptcha.ready(function() {
-    isRecaptchaInit = true;
-    grecaptcha.execute('6LfPn_UUAAAAAN-EHnm2kRY9dUT8aTvIcfrvxGy7', {action: 'homepage'}).then(function(token) {
-      $(form_id).find('input[name="form_token"]').val(token);
-      let fed = new FormData($(form_id)[0]);
-      ajaxRequest(fed, form_id + "_send");
-    });
-  });
-}
-}
 
-function setRecruitSubmitHandler(form_p_id) {
-var form_id = "#" + form_p_id;
-
-$(form_id + "_send").on("click", function(e) {
-  e.preventDefault();  
-  sendRecruitApplicationData(form_id);	  
-});
-
-$('[name^=form_phone]').keypress(validateNumber);
+  $('[name^=form_phone]').keypress(validateNumber);
 }
 
 function setEmailContact() {
-grecaptcha.ready(function() {
-  isRecaptchaInit = true;
-});
+  grecaptcha.ready(function() {
+    isRecaptchaInit = true;
+  });
 
-setSubmitHandler("email_up");
-setRecruitSubmitHandler("recruit_form");
+  setSubmitHandler("email_up");
 }
 
 function validateNumber(event) {
