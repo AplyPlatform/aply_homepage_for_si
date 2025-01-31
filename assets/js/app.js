@@ -377,7 +377,7 @@ function checkParam() {
   const urlParams = new URLSearchParams(queryString);    
   let p_id = urlParams.get('p');
 
-  if (!isSet(p_id)) p_id = "main";
+  if (!AAPI_isSet(p_id)) p_id = "main";
 
   return p_id;
 }
